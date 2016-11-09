@@ -1,0 +1,34 @@
+#!/bin/bash
+# This is the setup script for aevi on terminal
+# this game was made by leo smith all rights are reserved :)
+
+E_NOROOT=-1
+C_FILE=main.c
+EXEC=aevi
+GAME_PATH=/usr/games
+HOME_PATH=/usr/games/aevi
+
+if [[ $EUID -ne 0 ]]; then
+
+	printf "\e[1;31m[!] You are not runing this as root\e[0m\n"
+	exit $E_NOROOT
+
+else
+
+	gcc $C_FILE -o $EXEC -lncurses -std=c99
+
+	if [ ! -d "$GAME_PATH" ]; then
+		mkdir $GAME_PATH
+	fi
+
+	mkdir $HOME_PATH
+	mv -v $EXEC $HOME_PATH
+
+	printf "You can now play the game using the command aevi :)\n"
+	printf "Thank you for installing this fun project i might be adding\n"
+	printf "new features in the near or far future\n"
+
+	echo 'write this line to .bashrc to have the command export PATH=$PATH:/usr/games/aevi'
+fi
+
+exit
