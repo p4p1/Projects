@@ -25,7 +25,7 @@ class lpg(self):
 
 	def generate(self, filename=None):
 		''' Main function '''
-		text = self.first
+		
 
 if __name__ == "__main__":
 	gen = lpg()
