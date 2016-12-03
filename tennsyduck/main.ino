@@ -28,7 +28,7 @@ void pressKey(long key)
   Keyboard.send_now();
 }
 
-#define PASSWD "52!@6!86247205102bb82f@94!0rez"
+#define PASSWD "HelloWorld"
 
 const int ledPin = 13;
 const int noExecPin = 23;
