@@ -106,7 +106,7 @@ void sscript()
 {
 	pressModifier(MODIFIERKEY_GUI);
 	resetKey();
-  delay(600);
+	delay(600);
 	Keyboard.print("terminal");
 	pressKey(KEY_ENTER);
 	delay(1000);
