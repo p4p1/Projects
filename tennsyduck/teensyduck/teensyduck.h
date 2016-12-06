@@ -7,7 +7,6 @@
 const int ledPin = 13;
 const int noExecPin = 23;
 const int passwdPin = 1;
-const int secScript = 2;
 
 void resetKey();
 void pressModifier(long mod);
