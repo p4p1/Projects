@@ -41,7 +41,7 @@ void pauseScript()
 { 
   ledBlinker(1);
   while(1) {
-    delay(1000);
+    delay(1);
     if(digitalRead(noExecPin) != HIGH){
       break;
     }
