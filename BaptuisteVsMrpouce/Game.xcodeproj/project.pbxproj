@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76154B7F1DEE1642007B2D9D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 76154B7E1DEE1642007B2D9D /* main.c */; };
+		76154B881DEE1789007B2D9D /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76154B871DEE1789007B2D9D /* SDL2.framework */; };
+		76154B8C1DEE1B5A007B2D9D /* menu.c in Sources */ = {isa = PBXBuildFile; fileRef = 76154B8A1DEE1B5A007B2D9D /* menu.c */; };
+		762494BC1DF5DC3600EAADB0 /* game.c in Sources */ = {isa = PBXBuildFile; fileRef = 762494BA1DF5DC3600EAADB0 /* game.c */; };
+		769C91A91DEF656C00B10684 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769C91A81DEF656C00B10684 /* SDL2_image.framework */; };
+		769C91AB1DEF657400B10684 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769C91AA1DEF657400B10684 /* SDL2_mixer.framework */; };
+		769C91AD1DEF657C00B10684 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769C91AC1DEF657C00B10684 /* SDL2_ttf.framework */; };
+		769EB7FB1E0B154B006D20D7 /* end.c in Sources */ = {isa = PBXBuildFile; fileRef = 769EB7F91E0B154A006D20D7 /* end.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76154B791DEE1641007B2D9D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		76099A441DF4B612003EE61B /* baptou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baptou.png; path = Game/Resources/baptou.png; sourceTree = SOURCE_ROOT; };
+		76099A451DF4B866003EE61B /* menu_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menu_music.mp3; path = Game/Resources/menu_music.mp3; sourceTree = SOURCE_ROOT; };
+		76099A461DF4B866003EE61B /* Wall_orteil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wall_orteil.png; path = Game/Resources/Wall_orteil.png; sourceTree = SOURCE_ROOT; };
+		76099A471DF4B866003EE61B /* Wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wall.png; path = Game/Resources/Wall.png; sourceTree = SOURCE_ROOT; };
+		76154B7B1DEE1642007B2D9D /* Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Game; sourceTree = BUILT_PRODUCTS_DIR; };
+		76154B7E1DEE1642007B2D9D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		76154B871DEE1789007B2D9D /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		76154B891DEE17E0007B2D9D /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		76154B8A1DEE1B5A007B2D9D /* menu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = menu.c; sourceTree = "<group>"; };
+		76154B8B1DEE1B5A007B2D9D /* game_menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_menu.h; sourceTree = "<group>"; };
+		762494BA1DF5DC3600EAADB0 /* game.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = game.c; sourceTree = "<group>"; };
+		762494BB1DF5DC3600EAADB0 /* game_main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_main.h; sourceTree = "<group>"; };
+		769C91A71DEF624B00B10684 /* baptousite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baptousite.png; path = Game/Resources/baptousite.png; sourceTree = SOURCE_ROOT; };
+		769C91A81DEF656C00B10684 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		769C91AA1DEF657400B10684 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		769C91AC1DEF657C00B10684 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		769EB7F91E0B154A006D20D7 /* end.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = end.c; sourceTree = "<group>"; };
+		769EB7FA1E0B154A006D20D7 /* game_end.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_end.h; sourceTree = "<group>"; };
+		76EAE6FF1DFDCE57002E506F /* blip - sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "blip - sound effect.mp3"; path = "Game/Resources/blip - sound effect.mp3"; sourceTree = SOURCE_ROOT; };
+		76EAE7001DFDCE57002E506F /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Map.png; path = Game/Resources/Map.png; sourceTree = SOURCE_ROOT; };
+		76EAE7011DFDCE57002E506F /* pouce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pouce.png; path = Game/Resources/pouce.png; sourceTree = SOURCE_ROOT; };
+		76EAE7021DFDCE57002E506F /* pouce2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pouce2.png; path = Game/Resources/pouce2.png; sourceTree = SOURCE_ROOT; };
+		76EAE7031DFDCE57002E506F /* sanstaina.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sanstaina.ttf; path = Game/Resources/sanstaina.ttf; sourceTree = SOURCE_ROOT; };
+		76EAE7041DFDCE57002E506F /* SCT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SCT.png; path = Game/Resources/SCT.png; sourceTree = SOURCE_ROOT; };
+		76EAE7051DFDCE57002E506F /* SecSide_Wall_orteil1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SecSide_Wall_orteil1.png; path = Game/Resources/SecSide_Wall_orteil1.png; sourceTree = SOURCE_ROOT; };
+		76EAE7061DFDCE57002E506F /* SecSide_Wall_orteil2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SecSide_Wall_orteil2.png; path = Game/Resources/SecSide_Wall_orteil2.png; sourceTree = SOURCE_ROOT; };
+		76EAE7071DFDCE57002E506F /* Side_Wall_orteil1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Side_Wall_orteil1.png; path = Game/Resources/Side_Wall_orteil1.png; sourceTree = SOURCE_ROOT; };
+		76EAE7081DFDCE57002E506F /* Side_Wall_orteil2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Side_Wall_orteil2.png; path = Game/Resources/Side_Wall_orteil2.png; sourceTree = SOURCE_ROOT; };
+		76EAE7091DFDCE57002E506F /* Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Title.png; path = Game/Resources/Title.png; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76154B781DEE1641007B2D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				769C91AD1DEF657C00B10684 /* SDL2_ttf.framework in Frameworks */,
+				769C91AB1DEF657400B10684 /* SDL2_mixer.framework in Frameworks */,
+				76154B881DEE1789007B2D9D /* SDL2.framework in Frameworks */,
+				769C91A91DEF656C00B10684 /* SDL2_image.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76154B721DEE1641007B2D9D = {
+			isa = PBXGroup;
+			children = (
+				769C91A51DEF61E600B10684 /* Resources */,
+				76154B7D1DEE1642007B2D9D /* Game */,
+				76154B7C1DEE1642007B2D9D /* Products */,
+				769C91AC1DEF657C00B10684 /* SDL2_ttf.framework */,
+				769C91AA1DEF657400B10684 /* SDL2_mixer.framework */,
+				769C91A81DEF656C00B10684 /* SDL2_image.framework */,
+				76154B871DEE1789007B2D9D /* SDL2.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		76154B7C1DEE1642007B2D9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76154B7B1DEE1642007B2D9D /* Game */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76154B7D1DEE1642007B2D9D /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				76154B7E1DEE1642007B2D9D /* main.c */,
+				76154B891DEE17E0007B2D9D /* main.h */,
+				76154B8A1DEE1B5A007B2D9D /* menu.c */,
+				76154B8B1DEE1B5A007B2D9D /* game_menu.h */,
+				762494BA1DF5DC3600EAADB0 /* game.c */,
+				762494BB1DF5DC3600EAADB0 /* game_main.h */,
+				769EB7F91E0B154A006D20D7 /* end.c */,
+				769EB7FA1E0B154A006D20D7 /* game_end.h */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		769C91A51DEF61E600B10684 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				76099A441DF4B612003EE61B /* baptou.png */,
+				769C91A71DEF624B00B10684 /* baptousite.png */,
+				76099A451DF4B866003EE61B /* menu_music.mp3 */,
+				76099A461DF4B866003EE61B /* Wall_orteil.png */,
+				76099A471DF4B866003EE61B /* Wall.png */,
+				76EAE6FF1DFDCE57002E506F /* blip - sound effect.mp3 */,
+				76EAE7001DFDCE57002E506F /* Map.png */,
+				76EAE7011DFDCE57002E506F /* pouce.png */,
+				76EAE7021DFDCE57002E506F /* pouce2.png */,
+				76EAE7031DFDCE57002E506F /* sanstaina.ttf */,
+				76EAE7041DFDCE57002E506F /* SCT.png */,
+				76EAE7051DFDCE57002E506F /* SecSide_Wall_orteil1.png */,
+				76EAE7061DFDCE57002E506F /* SecSide_Wall_orteil2.png */,
+				76EAE7071DFDCE57002E506F /* Side_Wall_orteil1.png */,
+				76EAE7081DFDCE57002E506F /* Side_Wall_orteil2.png */,
+				76EAE7091DFDCE57002E506F /* Title.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76154B7A1DEE1641007B2D9D /* Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76154B821DEE1642007B2D9D /* Build configuration list for PBXNativeTarget "Game" */;
+			buildPhases = (
+				76154B771DEE1641007B2D9D /* Sources */,
+				76154B781DEE1641007B2D9D /* Frameworks */,
+				76154B791DEE1641007B2D9D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Game;
+			productName = Game;
+			productReference = 76154B7B1DEE1642007B2D9D /* Game */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76154B731DEE1641007B2D9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Leo Smith";
+				TargetAttributes = {
+					76154B7A1DEE1641007B2D9D = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2XUYC5V6EP;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 76154B761DEE1641007B2D9D /* Build configuration list for PBXProject "Game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 76154B721DEE1641007B2D9D;
+			productRefGroup = 76154B7C1DEE1642007B2D9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76154B7A1DEE1641007B2D9D /* Game */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76154B771DEE1641007B2D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				762494BC1DF5DC3600EAADB0 /* game.c in Sources */,
+				76154B7F1DEE1642007B2D9D /* main.c in Sources */,
+				76154B8C1DEE1B5A007B2D9D /* menu.c in Sources */,
+				769EB7FB1E0B154B006D20D7 /* end.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		76154B801DEE1642007B2D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		76154B811DEE1642007B2D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		76154B831DEE1642007B2D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 2XUYC5V6EP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		76154B841DEE1642007B2D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 2XUYC5V6EP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76154B761DEE1641007B2D9D /* Build configuration list for PBXProject "Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76154B801DEE1642007B2D9D /* Debug */,
+				76154B811DEE1642007B2D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76154B821DEE1642007B2D9D /* Build configuration list for PBXNativeTarget "Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76154B831DEE1642007B2D9D /* Debug */,
+				76154B841DEE1642007B2D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76154B731DEE1641007B2D9D /* Project object */;
+}
