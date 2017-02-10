@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Enter webserver port: "
+echo "Note that you need root for port 80"
+printf ">>"
+read PORT
+
+if [ $PORT = "80" ];then
+	sudo -i
+fi
+
+/usr/bin/python -c "epm.epm('../web/account.html').listen($PORT)"

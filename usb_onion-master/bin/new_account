@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Username/Email:"
+printf ">>"
+read user
+echo "Password"
+printf ">>"
+read passwd
+
+/usr/bin/python -c "import epm ; epm.epm('../web/account.html').addAcount('$user', '$passwd')"

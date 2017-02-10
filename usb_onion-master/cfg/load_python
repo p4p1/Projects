@@ -1,0 +1,8 @@
+#!/bin/bash
+
+P_ROOT=`pwd`                #
+P_BIN=$P_ROOT/bin
+P_TEMP=$P_ROOT/temp
+L_PYLIB=$P_ROOT/pylib
+
+cd $L_PYLIB

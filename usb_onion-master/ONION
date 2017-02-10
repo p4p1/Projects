@@ -1,0 +1,46 @@
+#!/bin/bash
+# Onion interpretor, use to execute the different commands of this usb stick
+# made by papiii. basicly a shell
+
+# global varibles
+
+PROMPT1="ONION | $PWD > "		# main prompt
+E_NO_CMD=404								# error if the commad does not exist
+P_ROOT=`pwd`								#
+P_BIN=$P_ROOT/bin
+P_CFG=$P_ROOT/cfg
+P_TEMP=$P_ROOT/temp
+L_PYLIB=$P_ROOT/pylib
+STARTUP=init
+
+function loadupMessage {
+	echo "+----------------------------------+"
+	echo "| Welcome to ONION, made by papiii |"
+	echo "+----------------------------------+"
+}
+
+function init {
+	$P_CFG/startup
+}
+
+function getCmd {
+	PATH=$P_BIN/$1
+	if [[ ! -e $PATH ]]; then
+		echo "[!] Error: $E_NO_CMD | Command not found!"
+	else
+		$PATH		# run the command
+	fi
+}
+
+init
+env &> /dev/null
+
+while [ $? -ne 6 ]; do
+
+	printf "%s" "$PROMPT1"
+	read cmd
+	if [[ ! -z $cmd ]]; then 
+		getCmd $cmd
+	fi
+	
+done

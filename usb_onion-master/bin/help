@@ -1,0 +1,22 @@
+#!/bin/bash
+# Made by: papii
+# help command when you need help :D
+
+function loadupMessage {
+ 	printf "+---------------------------------------------------------------------+\n"
+  printf "|------------- Welcome to ONION's HELP, made by papiii ---------------|\n"
+	printf "|-- here you can find most of the documentation you would ever need --|\n"
+  printf "+---------------------------------------------------------------------+\n"
+}
+
+function availableCommands {
+	printf "help\t\t-\tCommand you just run to have help.\n"
+	printf "exit\t\t-\tCommand to quit the interpretor.\n"
+	printf "new_account\t-\tAdd a new account to the epm page\n"
+	printf "web\t\t-\tLoad up the epm web interface on the given port\n"
+	printf "\t\t\t{!} Note port 80 needs root privilege\n"
+}
+
+loadupMessage
+availableCommands
+
