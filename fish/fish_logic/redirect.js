@@ -1,1 +1,0 @@
-document.location.href='htt[://www.facebook.com';
