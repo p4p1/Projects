@@ -1,0 +1,84 @@
+html
+{
+	background-color: white;
+	background-size: cover;
+    background-image:url(background.png);
+}
+
+body
+{
+	background-color: transparent;
+	font-family: monospace;
+	margin: 1.5px;
+	color: black;
+}
+
+a
+{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover
+{
+	color: orange;
+	font-style: italic;
+    text-decoration: underline;
+}
+
+a:visited
+{
+    color: red;
+}
+
+#youtube
+{
+     border: 2px solid;
+     border-radius: 25px;
+     width: 430px;
+     padding: 25px;
+     margin: 25px;
+     position: relative;
+     top: 100px;
+     left: 50px;
+}
+
+#youtube2
+{
+     border: 2px solid;
+     border-radius: 25px;
+     width: 430px;
+     padding: 25px;
+     margin: 25px;
+     position: absolute;
+     top: 160px;
+     left: 590px;
+}
+
+#album
+{
+     border: 2px solid;
+     border-radius: 25px;
+     width: 430px;
+     padding: 25px;
+     margin: 25px;
+     position: absolute;
+     top: 160px;
+     left: 1150px;
+}
+
+#header
+{
+	background-color: transparent;
+	position: relative;
+	font-size: 30px;
+	top: 50px;
+	left: 150px;
+}
+
+#music-player
+{
+    position: absolute;
+    top: 810px;
+    left: 50px;
+}

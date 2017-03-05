@@ -1,0 +1,50 @@
+/* CSS Document */
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#000000;
+}
+body {margin:50px;}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+h2 {color:#01335F; margin-top:30px;}
+.loginBlock {width:594px; margin:auto;}
+.TL, .TR {width:52px;height:71px;}
+.BL, .BR {width:52px;height:33px;}
+.TL, .TR, .ML, .MM, .MR,.BL, .BM, .BR {
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+.TL {background-image: url(../images/TL.jpg);}
+.TM {
+	background-image: url(../images/TM.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.TR {background-image: url(../images/TR.jpg);}
+
+.ML {background-image: url(../images/ML.jpg);}
+.MM {background-image: url(../images/MM.jpg); padding-left:40px; padding-right:15px; padding-top:30px;}
+.MR {background-image: url(../images/MR.jpg);}
+
+.BL {background-image: url(../images/BL.jpg);}
+.BM {background-image: url(../images/BM.jpg);}
+.BR {background-image: url(../images/BR.jpg);}
+
+th {text-align:left;}
+td {color:#01335F;}
+.link {
+	background-image: url(../images/fleche.png);
+	background-position:left center;
+	background-repeat:no-repeat;
+	padding-left:20px;
+	margin-top:20px;
+}
+.texterouge 
+{
+	color: red;
+}

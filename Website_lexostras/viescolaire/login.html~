@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<title>VieScolaire.net - Accueil</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<LINK href="css/accueil.css" type="text/css" rel="stylesheet">
+	</HEAD>
+	<body>
+		<table class="loginBlock" cellSpacing="0" cellPadding="0" border="0">
+			<tr>
+				<td class="TL">&nbsp;</td>
+				<td class="TM">&nbsp;</td>
+				<td class="TR">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="ML">&nbsp;</td>
+				<td class="MM"><form name="login" action="post.php" method="POST"><label for="username">Nom d'utilisateur:</label><br /><input type="username" id="username "name="username"><br /><label for="password">Mots de passe:</label><br /><input type="password" id="password" name="password"><input type="submit" name ="Login" value="Mise a jour"></form>  
+				<td class="MR">&nbsp;</td>			
+				</td>
+			</tr>
+			<tr>
+				<td class="BL">&nbsp;</td>
+				<td class="BM">&nbsp;</td>
+				<td class="BR">&nbsp;</td>
+			</tr>
+		</table>
+
+	</body>
+</HTML>
