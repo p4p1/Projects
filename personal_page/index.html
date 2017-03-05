@@ -1,73 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Leo Smith's page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<head>
+		<title>Leo Smith's page</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+		<link rel='icon' type='image/png' href='https://www.emojibase.com/resources/img/emojis/hangouts/1f427.png' />
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous'>
 		<style>
-			body {
-				position: absolute;
-				left: 10px;
-				right: 10px;
-				top: 10px;
-				bottom: 10px;
-			}
-			#footer {
-				position: absolute;
-				bottom: 1px;
-				right: 1px;
-				color: gray;
-			}
-			#main_page{
-				border-radius: 10px;
-			}
+			body { position: absolute; left: 30px; right: 30px; top: 30px; bottom: 30px; }
+			img.resize { height: auto; width: auto; }
+			#rights_reserved { position: absolute; bottom: 1px; right: 1px; color: gray; }
+			#header { position: relative; }
+			#how_does_this_work, #form_content{ position: relative; display:inline-block; width: 300px; top: 0px; }
+			#main_page , #contact_me, #alert, #msg_sent{ position: absolute; text-align:left; }
 		</style>
-  </head>
-  <body>
-		<div id="header">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<p class="navbar-text navbar-right"><a onclick="contact();" class="navbar-link">Contact me direclty</a></p>
-            <p class="navbar-text navbar-right"><a href="mailto:k0oo@icloud.com" class="navbar-link">Email me</a></p>
-						<p class="navbar-text navbar-right"><a onclick="home();" class="navbar-link">Home</a></p>
+	</head>
+	<body>
+		<center><img src='https://raw.githubusercontent.com/p4p1/Projects/master/personal_page/img.png'></center>
+		<div class='alert alert-danger' role='alert' id='alert'>This page is underdeveloppement</div>
+		<div class='alert alert-success' role='alert' id='msg_sent'>Sent</div>
+		<div id='header'>
+			<nav class='navbar navbar-default'>
+				<div class='container-fluid'>
+					<div class='navbar-header'>
+						<p class='navbar-text navbar-right'><a href='#' onclick='warning();' class='navbar-link'>Projects</a></p>
+						<p class='navbar-text navbar-right'><a href='#' onclick='contact();' class='navbar-link'>Send me a notification</a></p>
+						<p class='navbar-text navbar-right'><a href='mailto:k0oo@icloud.com' class='navbar-link'>Email me</a></p>
+						<p class='navbar-text navbar-right'><a href='#' onclick='home();' class='navbar-link'>Home</a></p>
 					</div>
 				</div>
 			</nav>
 		</div>
-		<div id="main_page">
-			<h1>Welcome</h1>
-			<p>I'm Leo Smith. I am a freelancer spetialized in C and Python. I have worked on my project's such as <a href="https://github.com/p4p1/p4p1">p4p1</a>
-					and many others, visit my github for more information about them. I also am currently working on cpython or the latest release of the python interpreter.
-					I know basic networking, security and more... I invite you to contact me dirrectly with the link above if you would like to have a chat.
+		<div id='main_page'>
+			<h1>Hello</h1>
+			<p>I am Leo Smith. I am a freelancer spetialized in C and experienced in Python, html, css, javascript, php and also arm assembly.
+			I have worked on many project's involving different software and hardware. For the hard ware aspect i have used Arduino's and raspberry pi's.
+			For the software side of things i worked on open source projects such asp4p1 and cpython / the python interpreter.
+			Visit my <a href='https://github.com/p4p1'>github</a> to see my on-going projects. I also know basic networking, security and more... All of wich i learned throught self teaching (using youtube and pdf's)
+			or on the go with different projects (personnal and professional). I use vim and OSX for writing my software but i sometimes use ubuntu or linux mint. I am currently
+			in hight school and i do freelancing as a hobby. I find it a shame that i know so much in computers but can't aply it to something usefull :c . In all of that in mind,
+			send me an email or send a notification on the screen of my bed room with the link's above. Have a nice day.
 			</p>
+			<blockquote>
+				<p>Programmer in the heart, Hacker in the mind. 🐧</p>
+				<footer>My Github <cite title='Source Title'>Profile Description</cite></footer>
+			</blockquote>
 		</div>
-		<div id="contact_me">
-			<form method="POST">
-				<div class="form-group">
-					<label for="exampleInputName2">Name</label>
-					<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-				</div>
-				<div class="form-group">
-					<textarea class="form-control" rows="3"></textarea>
-					<button type="submit" class="btn btn-default">Send message</button>
-				</div>
-			</form>
+		<div id='contact_me'>
+			<table>
+				<tr>
+					<td>
+						<div id='form_content'>
+							<form method='POST' action=''>
+								<div class='form-group'>
+									<label for='exampleInputName2'>Name</label>
+									<input type='text' class='form-control' id='exampleInputName2' name='msg_name' placeholder='Relic De-Lima Tatiana'>
+								</div>
+								<div class='form-group'>
+									<label for='exampleInputName2'>Message content</label>
+									<textarea class='form-control' cols='50' rows='3' name='msg_data'></textarea>
+									<button type='submit' class='btn btn-default' onclick='mesage();'>Send Notification</button>
+								</div>
+							</form>
+						</div>
+					</td>
+					<td><font color="white">invis padding</font></td>
+					<td>
+						<div id='how_does_this_work'>
+							<h2>How does this work?</h2>
+							<p>Around one month ago I bought an old wii to play Mario Galaxy, now that i finished the game
+							at 100% i don't really know what to do with it so I started writing homebrew apps for it and
+							because i needed a website for my freelancer carrer I thought it was funny to install the website
+							onto the wii.
+							</p>
+						</div>
+					</td>
+				</tr>
+			</table>
 		</div>
-		<div id="footer">
+		<footer id='rights_reserved'>
 			Leo smith - 2017 all rights reserved
-		</div>
-		<script>
-			function home() {
-				document.getElementById('main_page').style.visibility = 'visible';
-				document.getElementById('contact_me').style.visibility = 'hidden';
-			}
-			function contact(){
-				document.getElementById('main_page').style.visibility = 'hidden';
-				document.getElementById('contact_me').style.visibility = 'visible';
-			}
-			document.getElementById('contact_me').style.visibility = 'hidden';
-		</script>
-  </body>
+		</footer>
+	</body>
+	<script>
+		function home() { document.getElementById('main_page').style.visibility = 'visible'; document.getElementById('contact_me').style.visibility = 'hidden'; }
+		function contact(){ document.getElementById('main_page').style.visibility = 'hidden'; document.getElementById('contact_me').style.visibility = 'visible'; }
+		function warning(){ document.getElementById('alert').style.visibility = 'visible'; document.getElementById('header').style.top = '70px'; document.getElementById('main_page').style.top = '210px'; document.getElementById('contact_me').style.top = '210px'; }
+		function mesage(){ document.getElementById('msg_sent').style.visibility = 'visible'; document.getElementById('header').style.top = '70px'; document.getElementById('main_page').style.top = '210px'; document.getElementById('contact_me').style.top = '210px'; }
+		document.getElementById('contact_me').style.visibility = 'hidden'; document.getElementById('msg_sent').style.visibility = 'hidden'; document.getElementById('alert').style.visibility = 'hidden';
+	</script>
 </html>
