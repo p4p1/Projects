@@ -1,0 +1,55 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+F_START=~/.leorc
+DIALOG=${DIALOG=dialog}
+
+# All of the aliases
+alias python="python3"
+alias vi='/usr/bin/vim'
+alias l='ls -F'
+alias la='ls -a -F'
+alias ll='ls -l -F'
+alias ls='ls -F'
+
+# All of the ßFunctions
+md() { mkdir $1; cd $1; } # basic command to create and move to a dir
+cls() { clear ; pwd ; ls; }	# A nice cls command for linux
+
+
+# First Startup function,
+# Shows a message for the people that just got this bashrc
+if [[ ! -f "$F_START" ]]; then
+
+		touch $F_START
+		$DIALOG --title "Welcome" --msgbox "Welcome to this new .bashrc setup, i hope you like the efficiency of this .bashrc i spent lots of time updating it and editing this. Please visit my github at https://www.github.com/p4p1" 50 40
+		clear
+
+fi
+
+#Seting up color prompt
+if [[ $EUID -ne 0 ]]; then
+
+	PS1="\[\e[;32m\]\u \[\e[1;34m\][\W] \[\e[m\]-> "
+	PS2="\[\e[;32m\]->\[\e[m\] "
+	PS3="[\w]-> "
+	PS4=" \$ "
+
+else
+
+	PS1="\[\e[;31m\]\u \[\e[1;34m\][\W] \[\e[m\]-> "
+	PS2="\[\e[;31m\]->\[\e[m\] "
+	PS3="[\w]->"
+	PS4=" \$ "
+
+fi
+
+# All of the exports
+export PS1=$PS1		# prompt export
+export PS2=$PS2
+export PS3=$PS3
+export PS4=$PS4
+export DEVKITPRO=$HOME/devkitPro	# dekit ppc export
+export DEVKITPPC=$DEVKITPRO/devkitPPC
+export EDITOR=`whereis vim`

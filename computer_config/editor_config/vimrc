@@ -1,0 +1,12 @@
+set tabstop=2
+syntax enable
+set hid
+set ruler
+set hlsearch
+set showmatch
+colorscheme quantum
+
+autocmd bufnewfile *main.c so ~/.vim/c_main_header.txt
+autocmd bufnewfile *.py so ~/.vim/py_header.txt
+autocmd bufnewfile *.bash so ~/.vim/bash_header.txt
+

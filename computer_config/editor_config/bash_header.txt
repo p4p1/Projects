@@ -1,0 +1,7 @@
+:insert
+#!/bin/bash
+# Made by: papii
+# Description:
+
+.
+

@@ -1,0 +1,6 @@
+:insert
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Script made by papi
+.
+
