@@ -1,0 +1,14 @@
+:insert
+/*
+ *  Made by: Leo Smith
+ *
+ *  Description: <++>
+ */
+
+int main(int argc, char * argv[])
+{
+    <++>
+
+    return 0;
+}
+.
