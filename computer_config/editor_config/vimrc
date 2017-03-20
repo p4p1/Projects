@@ -1,12 +1,29 @@
-set tabstop=2
-syntax enable
-set hid
-set ruler
-set hlsearch
-set showmatch
+" Script made by p4p1, Last modified: Mon, 20 March 2017
+" This script is made to automate vim!
+" It set tabs colorscheme and much more
+
+" miscs :
+set nocompatible
+
+" Plugins :
+filetype plugin on
+
+" Color and tabs :
+set tabstop=4
+syntax on
 colorscheme quantum
 
-autocmd bufnewfile *main.c so ~/.vim/c_main_header.txt
-autocmd bufnewfile *.py so ~/.vim/py_header.txt
-autocmd bufnewfile *.bash so ~/.vim/bash_header.txt
+" General commands :
+inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+map <F3> :!pwd;ls<Enter>
 
+" C file commands :
+autocmd bufnewfile *main.c so ~/.vim/c_main_template.txt
+autocmd FileType c inoremap ;h <Esc>:1<Enter>i/*<Enter>Made by: Leo Smith<Enter><Enter>Description: <++><Enter>*/<Esc>hdbi
+autocmd FileType c map <F5> :!gcc % ; ./a.out
+
+" Python file commands :
+autocmd bufnewfile *.py so ~/.vim/py_header.txt
+
+" Bash file commands :
+autocmd bufnewfile *.bash so ~/.vim/bash_header.txt
