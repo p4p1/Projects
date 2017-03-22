@@ -1,14 +1,14 @@
 :insert
 /*
- *  Made by: Leo Smith
+ *	Made by: Leo Smith
  *
- *  Description: <++>
+ *	Description: <++>
  */
 
 int main(int argc, char * argv[])
 {
-    <++>
+	<++>
 
-    return 0;
+	return 0;
 }
 .

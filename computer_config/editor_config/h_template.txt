@@ -1,0 +1,6 @@
+:insert
+#ifndef <++>
+#define <++>
+
+#endif /* end of % */
+.
