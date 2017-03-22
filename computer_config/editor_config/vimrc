@@ -1,7 +1,7 @@
-" Script made by p4p1, Last modified: Mon, 20 March 2017
+ Script made by p4p1, Last modified: Mon, 20 March 2017
 " This script is made to automate vim!
 " It set tabs colorscheme and much more
-
+"
 " miscs :
 set nocompatible
 
@@ -9,21 +9,43 @@ set nocompatible
 filetype plugin on
 
 " Color and tabs :
-set tabstop=4
-syntax on
 colorscheme quantum
+syntax on
+set nu
+set noexpandtab
+set copyindent
+set preserveindent
+set softtabstop=0
+set shiftwidth=4
+set tabstop=4
+set autoindent
+
+" unmap the arrow keys!
+no <down> <Nop>
+no <left> <Nop>
+no <up> <Nop>
+no <right> <Nop>
 
 " General commands :
 inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
-map <F3> :!pwd;ls<Enter>
+map <F3> :!pwd&&ls<Enter>
+map <F2> :!cat %<Enter>
 
 " C file commands :
 autocmd bufnewfile *main.c so ~/.vim/c_main_template.txt
-autocmd FileType c inoremap ;h <Esc>:1<Enter>i/*<Enter>Made by: Leo Smith<Enter><Enter>Description: <++><Enter>*/<Esc>hdbi
+autocmd FileType c inoremap ;h <Esc>:1<Enter>i/*<Enter>Made by: Leo Smith<Enter><Enter>Description: <++><Enter><Backspace>/<Enter><Enter>
 autocmd FileType c map <F5> :!gcc % ; ./a.out
 
-" Python file commands :
-autocmd bufnewfile *.py so ~/.vim/py_header.txt
+" h file commands :
+autocmd bufnewfile *.h so ~/.vim/h_template.txt
 
-" Bash file commands :
-autocmd bufnewfile *.bash so ~/.vim/bash_header.txt
+" Python file commands :
+autocmd FileType python inoremap ;h <Esc>:1<Enter>i#!/usr/bin/env python<Enter># -*- coding: utf-8 -*-<Enter># Script made by Leo Smith<Enter># <++>
+autocmd FileType python map <F5> :!python %<Enter>
+
+" html file commands :
+autocmd bufnewfile *.html so ~/.vim/html_template.txt
+
+" All text file commands:
+inoremap ;bash <Esc>:1i#!/bin/bash<Enter># Made by: Leo Smith<Enter># Description: <++><Enter>
+autocmd BufNewFile * :write
