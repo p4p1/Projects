@@ -1,4 +1,4 @@
- Script made by p4p1, Last modified: Mon, 20 March 2017
+" Script made by p4p1, Last modified: Mon, 20 March 2017
 " This script is made to automate vim!
 " It set tabs colorscheme and much more
 "
@@ -12,22 +12,34 @@ filetype plugin on
 colorscheme quantum
 syntax on
 set nu
-set noexpandtab
-set copyindent
-set preserveindent
-set softtabstop=0
+"set noexpandtab
+"set copyindent
+"set preserveindent
+set expandtab
 set shiftwidth=4
 set tabstop=4
 set autoindent
+
+" backup files dirrectory
+set backupdir=./.backup,.,/tmp
 
 " unmap the arrow keys!
 no <down> <Nop>
 no <left> <Nop>
 no <up> <Nop>
 no <right> <Nop>
+ino <down> <Nop>
+ino <left> <Nop>
+ino <up> <Nop>
+ino <right> <Nop>
+vno <down> <Nop>
+vno <left> <Nop>
+vno <up> <Nop>
+vno <right> <Nop>
 
 " General commands :
 inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+inoremap ;i <Esc>:set noexpandtab<Enter>A<Tab><Esc>:set expandtab<Enter>A
 map <F3> :!pwd&&ls<Enter>
 map <F2> :!cat %<Enter>
 
@@ -46,6 +58,11 @@ autocmd FileType python map <F5> :!python %<Enter>
 " html file commands :
 autocmd bufnewfile *.html so ~/.vim/html_template.txt
 
+" arduino file commands :
+autocmd FileType arduino inoremap ;h <Esc>:1<Enter>i/*<Enter>Made by: Leo Smith<Enter><Enter>Description: <++><Enter><Backspace>/<Enter><Enter>
+autocmd bufnewfile *.ino so ~/.vim/arduino_template.txt
+
 " All text file commands:
-inoremap ;bash <Esc>:1i#!/bin/bash<Enter># Made by: Leo Smith<Enter># Description: <++><Enter>
+inoremap ;b <Esc>:1i#!/bin/bash<Enter># Made by: Leo Smith<Enter># Description: <++><Enter>
 autocmd BufNewFile * :write
+
