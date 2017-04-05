@@ -21,6 +21,7 @@ if [ $EUID -eq "0" ]; then
 		apt-get install lighttpd								# light web server to host pages
 		apt-get install php-cgi									# php cgi to work on php projects
 		apt-get install dialog									# dialog command
+		pip install thefuck
 
 	elif [[ "$1" = "2" ]]; then	# advanced install
 
@@ -59,6 +60,7 @@ if [ $EUID -eq "0" ]; then
 		apt-get install unrar										# unrar to open .rar compressed file
 		apt-get install arduino									# arduino
 		apt-get install dialog									# dialog command
+		pip install thefuck
 
 	fi
 
