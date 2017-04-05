@@ -12,13 +12,12 @@ filetype plugin on
 colorscheme quantum
 syntax on
 set nu
-"set noexpandtab
-"set copyindent
-"set preserveindent
+set colorcolumn=80
 set expandtab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=8
 set autoindent
+set cursorline
 
 " backup files dirrectory
 set backupdir=./.backup,.,/tmp
@@ -37,8 +36,13 @@ vno <left> <Nop>
 vno <up> <Nop>
 vno <right> <Nop>
 
+" line number for inside of insert mode or not
+autocmd InsertEnter * :set nornu
+autocmd InsertLeave * :set relativenumber
+
 " General commands :
-inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+inoremap <Space><Space><Space> <Esc>/<++><Enter>"_c4l
+inoremap <Tab> <Space><Space>
 inoremap ;i <Esc>:set noexpandtab<Enter>A<Tab><Esc>:set expandtab<Enter>A
 map <F3> :!pwd&&ls<Enter>
 map <F2> :!cat %<Enter>
