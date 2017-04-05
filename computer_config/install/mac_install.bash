@@ -25,6 +25,7 @@ if [ $EUID -eq "0" ]; then
 		brew install dfu-programmer			# install the programmer for custom arduino
 		brew install php70							# install php
 		brew install shc								# install shell compiler
+		sudo pip install thefuck						# install the fuck
 		# brew install wireshark					# install tshark util
 		# there is an error with tshark on mac osX i don;t know how to change it,
 		# this is the error:
@@ -41,6 +42,7 @@ if [ $EUID -eq "0" ]; then
 		brew install dfu-programmer			# install the programmer for custom arduino
 		brew install php70							# install php
 		brew install shc								# install shell compiler
+		sudo pip install thefuck							# install the fuck
 		#brew install wireshark					# install tshark util
 		brew install dialog							# dialog command
 		brew install mingw-w64							# install mingw54 cros compiler
