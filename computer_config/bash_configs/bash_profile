@@ -3,20 +3,23 @@
 # for examples
 
 F_START=~/.leorc
+F_PARROT_PS1=~/.ps1_parrot
 DIALOG=${DIALOG=dialog}
 
 # All of the aliases
 alias python="python3"
 alias vi='/usr/bin/vim'
-alias l='ls -F'
+alias c='clear'
+alias l='ls -F -G'
 alias la='ls -a -F'
 alias ll='ls -l -F'
 alias ls='ls -F'
+alias fuck='eval $(thefuck $( fc -ln -1 )); history -r'
 
 # All of the ßFunctions
 md() { mkdir $1; cd $1; } # basic command to create and move to a dir
-cls() { clear ; pwd ; ls; }	# A nice cls command for linux
-
+cls() { c ; pwd ; l; }	# A nice cls command for linux
+parrot() { PS1="\[\033[0;31m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200\")[$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]root\[\033[01;33m\]@\[\033[01;96m\]\h'; else echo '\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h'; fi)\[\033[0;31m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;31m\]]\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\\$\[\e[0m\]"; }	# function to start parot os mode
 
 # First Startup function,
 # Shows a message for the people that just got this bashrc
@@ -25,7 +28,7 @@ if [[ ! -f "$F_START" ]]; then
 		touch $F_START
 		$DIALOG --title "Welcome" --msgbox "Welcome to this new .bashrc setup, i hope you like the efficiency of this .bashrc i spent lots of time updating it and editing this. Please visit my github at https://www.github.com/p4p1" 50 40
 		clear
-
+		
 fi
 
 #Seting up color prompt
@@ -52,4 +55,4 @@ export PS3=$PS3
 export PS4=$PS4
 export DEVKITPRO=$HOME/devkitPro	# dekit ppc export
 export DEVKITPPC=$DEVKITPRO/devkitPPC
-export EDITOR=`whereis vim`
+export EDITOR=/usr/bin/vim
