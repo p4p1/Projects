@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wall of the plants - Main_page</title>
+		<style>
+			ul, li{
+				display: inline;
+				margin: 15px;
+			}
+			th {
+				margin: 15px;
+			}
+			iframe {
+				width:130px;
+				height:130px;
+			}
+			div {
+				position: relative;
+				left: 70px;
+				margin: 15px;
+			}
+			#if1, #if2 {
+				position: relative;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h2>commandes des pompes et des stores</h2>
+		<ul>
+			<li>pompes</li>
+			<li>store</li>
+		</ul>
+
+		<h2>information des plantes</h2>
+		<table>
+			<tr>
+				<th>Taux d'humidite</th>
+				<th>Temperature de l'air</th>
+				<th>Consomation d'eau</th>
+				<th>Ensoleillement</th>
+			</tr>
+			<tr>
+				<th id="taux_humidite"></th>
+				<th id="temperature"></th>
+				<th id="conso_eau"></th>
+				<th id="ensoleillement"></th>
+			</tr>
+		</table>
+	</body>
+</html>
+<script src="taux_humidite.js"></script>
+<script src="temperature.js"></script>
+<script src="conso_eau.js"></script>
+<script src="ensoleillement.js"></script>
