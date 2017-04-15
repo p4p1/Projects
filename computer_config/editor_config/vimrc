@@ -20,6 +20,8 @@ set tabstop=4
 set autoindent
 set cursorline
 set ruler
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+set list
 " epitech:
 " set tabstop=8
 " set shiftwidth=2
@@ -43,8 +45,8 @@ vno <up> <Nop>
 vno <right> <Nop>
 
 " line number for inside of insert mode or not
-autocmd InsertEnter * :set nornu
-autocmd InsertLeave * :set relativenumber
+autocmd InsertEnter * :set nornu nolist
+autocmd InsertLeave * :set relativenumber list
 
 " General commands :
 inoremap <Space><Space> <Esc>/TODO:<Enter>
