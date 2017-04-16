@@ -1,0 +1,38 @@
+#!/bin/bash
+# Brightness control
+# Made by Leo Smith
+# Usage:
+#   ./brightness.sh plus 5
+#   ./brightness.sh minus 5
+
+E_NO_ARG=-1
+BRIGHTNESS=$(cat /sys/class/leds/smc\:\:kbd_backlight/brightness)
+
+if [[ ! -e "/tmp/backlight" ]]; then
+    echo "root" | sudo -S chown leo:leo /sys/class/leds/smc\:\:kbd_backlight/brightness
+    touch /tmp/backlight
+fi
+
+if [[ "$1" = "plus" ]]; then
+    ((TEMP = $BRIGHTNESS + $2))
+    if (($TEMP >= 100 )); then
+        echo 100 > /sys/class/leds/smc\:\:kbd_backlight/brightness
+    else
+        echo $TEMP > /sys/class/leds/smc\:\:kbd_backlight/brightness
+    fi
+    echo $BRIGHTNESS
+    echo $TEMP
+else
+
+    ((TEMP = $BRIGHTNESS - $2))
+    if (($TEMP <= 0 )); then
+        echo 0 > /sys/class/leds/smc\:\:kbd_backlight/brightness
+    else
+        echo $TEMP > /sys/class/leds/smc\:\:kbd_backlight/brightness
+    fi
+    echo $BRIGHTNESS
+    echo $TEMP
+
+
+fi
+
