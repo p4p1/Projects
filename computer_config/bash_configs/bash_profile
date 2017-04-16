@@ -57,3 +57,7 @@ export PS4=$PS4
 export DEVKITPRO=$HOME/devkitPro	# dekit ppc export
 export DEVKITPPC=$DEVKITPRO/devkitPPC
 export EDITOR=/usr/bin/vim
+
+feh --bg-scale /home/leo/.theme/wallpaper.jpg
+xinput set-prop 13 "libinput Tapping Enabled" 1
+
