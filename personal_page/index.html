@@ -14,55 +14,16 @@
         <!--===========-->
 
 <style>
-    html{
-        width:100%;
-        height:100%;
-        position: relative;
-    }
-    body {
-        background-color: rgb(38,38,38);
-        color: white;
-        position: absolute;
-        left: 15px;
-        top: 15px;
-        width:100%;
-        height:100%;
-        font-family: "Lucida Console", Monaco, monospace;
-    }
-    a {
-        color: white;
-    }
+    html{width:100%;height:100%;position: relative;}
+    body {background-color: rgb(38,38,38);color: white;position: absolute;left: 15px;top: 15px;width:100%;height:100%;font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;}
+    a {color: white;}
     a:hover, a:visited, a:link, a:active { text-decoration: none; }
-    a:hover {
-        color: rgb(151, 131, 213);
-    }
-    #box {
-        background-color:gray;
-        float:right;
-        position: relative;
-        height:100%;
-        width:75%;
-        box-shadow: 5px 5px 10px black;
-    }
-    #navbar {
-        border-spacing: 5px;
-        float:left;
-        width: 25%;
-    }
-    #middle_text {
-        text-align: center;
-        vertical-align: middle;
-    }
-    #main {
-        position: absolute;
-        width:90%;
-        height:60%;
-    }
-    #box_content {
-        position: absolute;
-        left: 10px;
-        right:10px;
-    }
+    a:hover {color: rgb(151, 131, 213);}
+    #box {background-color:gray;float:right;position: relative;height:100%;width:75%;box-shadow: 5px 5px 10px black;overflow: auto;}
+    #navbar {border-spacing: 5px;float:left;width: 25%;}
+    #middle_text {text-align: center;vertical-align: middle;}
+    #main {position: absolute;width:90%;height:60%;}
+    #box_content {position: absolute;left: 10px;right:10px;}
 </style>
 
     </head>
@@ -71,8 +32,8 @@
         <div id="header">
             <table>
                 <tr>
-                    <th><img width="50px" height="50px" src="http://www.emoji.co.uk/files/emoji-one/food-drink-emoji-one/1610-peach.png" /></th>
-                    <th><h1>p4p1</h1></th>
+                    <th><a href="http://github.com/p4p1/"><img width="50px" height="50px" src="http://www.emoji.co.uk/files/emoji-one/food-drink-emoji-one/1610-peach.png" /></a></th>
+                    <th><h1><span id="titlep">p</span><span id="title4">4</span><span id="titlepp">p</span><span id="title1">1</span></h1></th>
                 </tr>
             </table>
         </div>
@@ -81,7 +42,7 @@
             <table id="navbar">
                 <tr>
                     <th><a onclick="disp_Projects();" href="#">Projects</a></th>
-                    <th>&gt;</th>
+                    <th id="navbar_expand">&gt;</th>
                     <th></th><!-- padding th -->
                     <th></th>
                 </tr>
@@ -100,12 +61,7 @@
             </table>
             <div id="box">
                 <div id="box_content">
-                    <h2>p4p1 | <a href="https://github.com/p4p1/p4p1/">source</a></h2>
-                    <p>p4p1, is a reverse shell for remote use of the windows dommand prompt.
-                    This reverse shell allows you to use the dos shell that is provided with cmd.exe
-                    as a remote tool.</p>
-                    <img src="https://raw.githubusercontent.com/p4p1/p4p1/master/testing/Documentation/Screen%20Shot%202016-10-14%20at%2001.02.24.png"width="40%" height="40%" />
-                    <iframe width="40%" height="40%" src="https://www.youtube.com/embed/RpRrMuGo_y4" frameborder="0" allowfullscreen></iframe>
+                    <p id="middle_text"><br/>Pick a tab<br/>&lt;==</p>
                 </div>
             </div>
             <!-- <p id="middle_text"><br/>Pick a tab<br/>&lt;==</p> -->
@@ -114,12 +70,8 @@
     </body>
 
     <script>
-        function disp_Projects() {
-            document.getElementById('box_content').innerHTML = '';
-        }
-        function disp_Degrees() {
-            document.getElementById('box_content').innerHTML = 'stuff';
-        }
+function disp_Projects() {document.getElementById('navbar_expand').innerHTML="+";var i = Math.floor((Math.random() * 3));if (i == 0) {disp_p4p1();} else if(i == 1){disp_larp();} else {disp_kb();}}function disp_p4p1() {document.getElementById('box_content').innerHTML = '<h2><img height="25px" onclick="disp_kb();" width="25px" src="https://www.emojibase.com/resources/img/emojis/apple/x1f4be.png.pagespeed.ic.-F3WegsEJW.png"/> p4p1 | <a href="https://github.com/p4p1/p4p1/">source</a> <img height="25px" width="25px" onclick="disp_larp();" src="http://cdn.shopify.com/s/files/1/1061/1924/products/Lemon_Emoji_grande.png?v=1480481065" /></h2><p>p4p1, is a reverse shell for remote use of the windows dommand prompt. This reverse shell allows you to use the dos shell that is provided with cmd.exe as a remote tool.</p><img src="https://raw.githubusercontent.com/p4p1/p4p1/master/testing/Documentation/Screen%20Shot%202016-10-14%20at%2001.02.24.png"width="40%" height="40%" /> <iframe width="40%" height="40%" src="https://www.youtube.com/embed/RpRrMuGo_y4" frameborder="0" allowfullscreen></iframe>';}function disp_larp() {document.getElementById('box_content').innerHTML = '<h2><img height="25px" width="25px" onclick="disp_p4p1();" src="http://www.emoji.co.uk/files/emoji-one/food-drink-emoji-one/1610-peach.png"/> larp | <a href="https://github.com/p4p1/larp/">source</a> <img height="25px" width="25px" onclick="disp_kb();" src="https://www.emojibase.com/resources/img/emojis/apple/x1f4be.png.pagespeed.ic.-F3WegsEJW.png" /></h2><p>larp, or leo arp is a tool to arp spoof you\'re entire network. I made this for educational purposes  so please do not use this for illegal activites. larp has different sniffers implemented to get data from the current network. you can also add you\'re own sniffers.</p><img src=""width="40%" height="40%" /> <iframe width="40%" height="40%" src="" frameborder="0" allowfullscreen></iframe>';}function disp_kb() {document.getElementById('box_content').innerHTML = '<h2><img height="25px" width="25px" onclick="disp_larp();" src="http://cdn.shopify.com/s/files/1/1061/1924/products/Lemon_Emoji_grande.png?v=1480481065"/> kb_arduino | <a href="https://github.com/p4p1/kb_arduino_lib/">source</a> <img height="25px" width="25px" onclick="disp_p4p1();" src="http://www.emoji.co.uk/files/emoji-one/food-drink-emoji-one/1610-peach.png" /></h2><p>kb_arduino_lib, is a library for arduino. This library allows you to turn you\'re arduino into a keyboard.</p><img src=""width="40%" height="40%" /> <iframe width="40%" height="40%" src="https://www.youtube.com/embed/6aWnanQLB-s" frameborder="0" allowfullscreen></iframe>';}function disp_Degrees() {document.getElementById('navbar_expand').innerHTML="&gt;";document.getElementById('box_content').innerHTML = 'stuff';}function animate_title() {var pos = 0;var p = document.getElementById('titlep');var pq = document.getElementById('title4');var pp = document.getElementById('titlepp');var pi = document.getElementById('title1');var id = setInterval(fname, 1000);function fname() {if(pos == 7) {clearInterval(id);} else {if (pos == 0){p.style.color = 'white';pq.style.color = 'white';pp.style.color = 'white';pi.style.color = 'white';} else if (pos == 1) {p.style.color = 'rgb(82, 170, 252)';pq.style.color = 'white';pp.style.color = 'white';pi.style.color = 'white';} else if( pos ==2 ) {p.style.color = 'rgb(135, 215, 135)';pq.style.color = 'rgb(82, 170, 252)';pp.style.color = 'white';pi.style.color = 'white';} else if( pos == 3) {p.style.color = 'white';pq.style.color = 'rgb(135, 215, 135)';pp.style.color = 'rgb(82, 170, 252)';pi.style.color = 'white';} else if(pos == 4) {p.style.color = 'white';pq.style.color = 'white';pp.style.color = 'rgb(135, 215, 135)';pi.style.color = 'rgb(82, 170, 252)';} else if(pos == 5){p.style.color = 'white';pq.style.color = 'white';pp.style.color = 'white';pi.style.color = 'rgb(135, 215, 135)';} else {p.style.color = 'white';pq.style.color = 'white';pp.style.color = 'white';pi.style.color = 'white';}pos++;}}}
+animate_title();
     </script>
 
 </html>
