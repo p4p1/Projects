@@ -1,0 +1,125 @@
+#!/usr/bin/env python2.7
+# Psetup - tool to setup environnement for programming
+
+import os, sys
+import getpass
+from termcolor import colored
+
+NO_APT = False
+
+import psetup
+import psetup.psetup_c as psc
+import psetup.psetup_html as psh
+import psetup.psetup_vim as psv
+import psetup.psetup_pool as psp
+import psetup.psetup_md as psm
+import psetup.psetup_config as pscfg
+import psetup.psetup_python as pspy
+import psetup.psetup_bash as psb
+import psetup.psetup_fish as psf
+import psetup.psetup_repo as prepo
+try:
+    import psetup.psetup_software as psw
+except:
+    NO_APT = True
+import psetup.psetup_config_info as psfi
+import psetup.updator as update
+import psetup.psetup_epitech as pepi
+
+cfg = pscfg.config(None, None, None, None)
+name = None
+lang = None
+git = False
+
+try:
+    lang=sys.argv[1]
+    name=sys.argv[2]
+    if lang == "-repo":
+        git = True
+        lang = sys.argv[2]
+        name = sys.argv[3]
+except:
+    pass
+
+def error():
+    print 'Usage:'
+    print
+    psfi.config_usage().usage()
+    print
+    print 'Debug info:'
+    print '\tcfg.name: %r\tcfg.login: %r' % (cfg.name, cfg.login)
+    print '\tcfg.git_email: %r\tcfg.git_name: %r' % (cfg.git_email, cfg.git_name)
+    print '\tSoftware version: %r' % psetup.__version__
+    sys.exit(-1)
+
+if not getpass.getuser() == 'root':
+    try:
+        if not getpass.getuser() == 'papi':
+            update.verrify_latest()
+    except:
+        print colored("[!!] No network connection can't update", "red")
+    if not lang == "-cfg":
+        cfg.setup()
+
+if lang == '-c' or lang == '-C':
+    if name is None:
+        error()
+    psc.setupEnvironement(name, cfg, git).setup()
+elif lang == '-html' or lang == '-HTML':
+    if name is None:
+        error()
+    psh.setupEnvironement(name).setup()
+elif lang == '-pool' or lang == '-POOL':
+    if name is None:
+        error()
+    psp.setupEnvironement(name, cfg, git).setup()
+elif lang == '-vim' or lang == '-VIM':
+    psv.setupEnvironement().config()
+elif lang == '-software' or lang == '-SOFTWARE':
+    if NO_APT:
+        print colored("[!!] This funciton does not work because apt is not installed",\
+                "red")
+    else:
+        psw.setupEnvironement().config()
+elif lang == '-bash' or lang == '-BASH':
+    psb.setupEnvironement().config()
+elif lang == '-fish' or lang == '-FISH':
+    psf.setupEnvironement().config()
+elif lang == "-md" or lang == '-MD':
+    if name is None:
+        error()
+    psm.setupEnvironement(name).setup()
+elif lang == "-py" or lang == '-PY':
+    if name is None:
+        error()
+    pspy.setupEnvironement(name).setup()
+elif lang == "-pymodule" or lang == "-PYMODULE":
+    pspy.setupEnvironement(None).install_modules()
+elif lang == '-u' or lang == '-U':
+    update.verrify_latest(True)
+elif lang == '-cfg' or lang == '-CFG':
+    cfg.ask_cfg()
+    cfg.save_cfg()
+elif lang == '-git' or lang == '-GIT':
+    cfg.git_cfg()
+elif lang == '-rep' or lang == 'REP':
+    if lang is None:
+        error()
+    prepo.setupEnvironement(name).setup()
+elif lang == '-blih' or lang == '-BLIH':
+    pepi.install_blih(cfg)
+elif lang == '-all' or lang == '-ALL':
+    print colored("[*] Starting full install this will be long...", "green")
+    update.set_root()
+    if not NO_APT:
+        psw.setupEnvironement().config()
+    psv.setupEnvironement().config()
+    psb.setupEnvironement().config()
+    psf.setupEnvironement().config()
+    pspy.setupEnvironement(None).install_modules()
+    print colored("[*] Finished the install thank you for using!", "green")
+elif lang == '-man' or lang == '-MAN':
+    psfi.config_usage().display_everything()
+else:
+    print colored("[!!] Unknow language", "red")
+    error()
