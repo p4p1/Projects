@@ -1,0 +1,47 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# Made by Leo smith
+# crigen
+# Description:
+# Main script for crigen
+
+import os, sys, getopt
+import crigen.crigen_usage as usage
+import crigen.crigen_makefile as makefile
+
+verbose = False
+srcs = None
+include = None
+lib = None
+
+def main():
+    global verbose
+    global srcs
+    global include
+    global lib
+
+    try:
+        opts, args = getopt.getopt(sys.argv[1:], "hs:i:l:mv", [ "help", "srcs=", "include=", "lib=", "make" ])
+    except getopt.GetoptError as err:
+            print str(err)
+            usage.Usage().usage()
+            sys.exit(84)
+    for o, a in opts:
+        if o == "-v":
+            verbose = True
+        elif o in ("-h", "--help"):
+            usage.Usage().usage()
+        elif o in ("-s", "--srcs"):
+            srcs = a
+        elif o in ("-i", "--include"):
+            include = a
+        elif o in ("-l", "--lib"):
+            lib = a
+        elif o in ("-m", "--make"):
+            makefile.Makefile(lib_path=lib, src_path=srcs,\
+                    include_path=include, epi_cfg=True, verbose=verbose).create()
+        else:
+            assert False, "Unhandled option"
+
+if __name__ == "__main__":
+    main()
