@@ -1,0 +1,60 @@
+fetch("https://api.gotinder.com/v3/auth/login?locale=en", {"credentials":"omit","headers":{"accept":"application/json","accept-language":"en-US,en;q=0.9","app-session-id":"d2899a92-e972-4feb-b341-34639a25a8e7","app-session-time-elapsed":"654497","app-version":"1023100","content-type":"application/x-google-protobuf","funnel-session-id":"06399ca44b608e6a","persistent-device-id":"0e0fd746-0899-4524-94fd-6bf7e826dab6","platform":"web","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"cross-site","tinder-version":"2.31.0","user-session-id":"null","user-session-time-elapsed":"null","x-auth-token":"","x-supported-image-formats":"webp,jpeg"},"referrer":"https://tinder.com/","referrerPolicy":"origin","body":"\n\r\n\u000b33652486618","method":"POST","mode":"cors"});
+https://api.gotinder.com/v2/buckets?locale=en
+
+"credentials": "omit,
+"headers": {
+
+accept: application/json
+accept-language: en-US,en;q=0.9
+app-session-id: 62fcdd7c-85b3-45a0-8585-4399c8b1db70
+app-session-time-elapsed: 9656
+app-version: 1023001
+content-type: application/json
+persistent-device-id: 66636e8c-9a48-48e4-ab2c-914681960f2e
+platform: web
+sec-fetch-dest: empty
+sec-fetch-mode: cors
+sec-fetch-site: cross-site
+tinder-version: 2.30.1
+user-session-id: null
+user-session-time-elapsed: null
+x-supported-image-formats: webp,jpeg
+
+},
+"referrer": "https://tinder.com/",
+"referrerPolicy": "origin-when-cross-origin",
+body: {
+
+experiments:[
+    auth_options,
+    sms_auth_v2,
+    two_factor_auth
+],
+device_id:66636e8c-9a48-48e4-ab2c-914681960f2e
+
+},
+"method": "POST",
+"mode": "cors"
+
+
+
+fetch("<..>", {
+  method: "<..>",
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+    'platform': 'web',
+    'tinder-version': global.tinder_version,
+    'x-supported-image-formats': 'jpeg',
+  },
+  body: JSON.stringify({
+      experiments:[
+       "auth_options",
+       "sms_auth_v2",
+       "two_factor_auth"
+      ],
+      device_id:"null"
+  }),
+}).then((response) => response.json()).then((json) => {
+  <..>
+}).catch((error) => console.error(error));
