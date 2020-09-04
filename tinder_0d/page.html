@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>it's here</title>
+        <link href="./slider.css" rel="stylesheet" type="text/css" media="all" />
+<style>
+body {
+    background-color: black;
+    color: lightgreen;
+}
+.container {
+    margin: 5px 5px 5px 5px;
+}
+#token-form {
+    display: flex;
+}
+</style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>tinder_0d</h1>
+            <p>This is a browser extension to unblur picture from the tinder
+            liked page, this will help you recognize your matches faster.</p>
+        </div>
+        <div class="container">
+            <div id="token-form">
+                <input id='token' type='text' placeholder="x-auth-token" />
+                <button id='save' type='button'>save</button>
+            </div>
+        </div>
+        <div class="container">
+            <p id="status">abc</p>
+        </div>
+        <div class="container" id="token-form">
+            <label class="switch">
+                <input type="checkbox" id="switch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="container" id="debuglog">
+        </div>
+    </body>
+    <script src="./autoLiker.js"></script>
+    <script src="./tokenSaver.js"></script>
+    <script>
+        var button = document.getElementById('save');
+        var checkbox = document.querySelector('input[type="checkbox"]');
+
+        checkbox.addEventListener('change', setAutoLiker, false);
+        button.addEventListener('click', getToken, false);
+        chrome.storage.sync.get(['xauth'], function(i) {
+            if(!chrome.runtime.error) {
+                document.getElementById('status').textContent = i.xauth;
+            }
+        });
+        chrome.storage.sync.get(['autoliker'], function(i) {
+            if(!chrome.runtime.error) {
+                console.log("the val: ", i.autoliker);
+                if (i.autoliker) {
+                    document.getElementById("switch").setAttribute("checked", "");
+                }
+            }
+        });
+    </script>
+</html>
